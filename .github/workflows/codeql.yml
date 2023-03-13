@@ -35,7 +35,12 @@ jobs:
         # Use only 'java' to analyze code written in Java, Kotlin or both
         # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
-
+    
+    - if: matrix.language =='java'
+    name: Build Java
+     run: |
+        make bootstrap
+        make release
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
