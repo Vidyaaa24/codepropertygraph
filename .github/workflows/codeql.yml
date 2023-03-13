@@ -68,10 +68,10 @@ jobs:
     #     echo "Run, Build Application using script"
     #     ./location_of_script_within_repo/buildscript.sh
     
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@v2
-      with:
-        argument: build
+    #- name: Build with Gradle
+     # uses: gradle/gradle-build-action@v2
+     # with:
+      #  argument: build
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
